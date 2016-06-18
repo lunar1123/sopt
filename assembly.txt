@@ -1,0 +1,14 @@
+앞에 세줄은 prologue
+뒤에 두줄은 epilogue
+
+mov eax, DWORD PTR[ebp-0xC]
+
+argv[0] : 함수 불러옴
+esp에 0x80484f0집어넣음.
+
+mov DWORD PTR[esp+0x4], eax에서 인자값이 정해짐. 
+
+esp를 화살표라 생각하면 된다.
+
+mov DWORD PTR[esp], eax : esp가 eax를 가리킨다.
+
