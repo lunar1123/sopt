@@ -1,0 +1,54 @@
+SERVER - DBMS(DataBase Menagement System) - DATA
+
+
+열/column/필드/애트리뷰트
+행/레코드/튜플
+
+스키마
+: 테이블 여러개를 모아놓은 것. 
+
+
+관계형 DBMS
+
+index : 색인/빨리 검색 할 수 있도록 해주는 것.
+
+unique : 해당 값을 갖는 레코드가 유일하도록 한다.
+
+primary key : 특정 레코드를 식별할 수 있는 유일한 필드.
+
+fk(foreign key) : 다른 테이블과의 관계성 부여(두개 테이블 간의 동일 필드) //참조 무결성 중요시
+
+테이블 a의 fk가 테이블 b의 pk일 때 a는 참조 테이블, b는 피참조 테이블
+
+outer join : 매칭되는 행이 없어도 결과 출력(없으면 null로 출력)
+
+inner join : 연관없으면 불가능.
+
+
+
+CREATE DATABASE dbbasic;
+=> 스키마 생성
+USE dbbasic
+=> dbbasic을 기본으로 사용
+
+안에 table을 만들어야한다.
+
+CREATE TABLE basic (
+id INT NOT NULL AUTO_INCREMENT, => id값을 주지 않더라도 id가 자동으로 매겨진다.
+NAME VARCHAR(45) NOT NULL,
+position VARCHAR(45) NOT NULL,
+PRIMARY KEY(id)
+)
+ENGINE = innoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+=> table 생성
+
+mpn install mysql
+
+
+router.post('/', function(req, res, next) {
+안에
+var tell = req.body.tel1 + req.body.tel2 + req.body.tel3;
+
